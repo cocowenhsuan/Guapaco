@@ -61,6 +61,14 @@ nav {
     top: -20%;
     left: 60%;
 }
+.arrow{
+    /* border-bottom:4px solid #000 ; */
+    border-left: 4px solid transparent;
+    border-right:4px solid transparent;
+    border-top:4px solid #000;
+
+
+}
 
 .dialogo a {
     font-weight: 500;
