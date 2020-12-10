@@ -1,405 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOYOTA de GUAPACO</title>
     <link rel="shortcut icon" href="./pic/toyotalogo.jpeg " type="image/jpeg">
     <style>
-         *{
-        margin:0;
-        padding: 0;
-        list-style: none;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
 
-    .wrap{
-        padding-top: 60px;
-        margin: auto;
-        /* background-color: red; */
-    }
+        .wrap {
+            padding-top: 60px;
+            margin: auto;
+            /* background-color: red; */
+        }
 
-    /* 一 */
-    .section{
-        width: 960px;
-        height: 790px;
-        /* background-color: pink; */
-        margin: auto;
-        position: relative;
-        
-    }
-    .box{
-        width: 440px;
-        height: 280px;
-        background-color: #f5f5f5;
-        position: absolute;
-        right: 0px;
-        top:0px;
-        /* margin-top: 36px;   */
-    }
-    .card{
-        width: 350px;
-        height: 380px;
-        background-color: #000;
-        position: relative;
-        top: -36px;
-        display: flex;
-        flex-direction: column;
-        z-index: 1;    
-    }
-    .card .title p{
-        writing-mode: vertical-lr;
-        font-size: 110px;
-        letter-spacing: 10px;
-        
-    }
-    .title h2{
-        padding: 15px 5px 15px 40px;
-        box-sizing: border-box;
-    }
-    .title{
-        background-color: red;
-        height: 130px;
-        font-size: 22px;
-        padding: 5px;
-        box-sizing: border-box;
-        text-align: center;
-        line-height: 100px;
-        color: #fff;
-        display: flex;
-        
-    }
-    .context {
-        height: 250px;
-        padding: 20px;
-        box-sizing: border-box;
-        color: #fff;
-        background-color: #000;
+        /* 一 */
+        .section {
+            width: 960px;
+            height: 790px;
+            /* background-color: pink; */
+            margin: auto;
+            position: relative;
 
-    }
-    .context h3{
-        font-size: 25px;   
-        margin-bottom: 10px;
-    }
-    .context p{
-        font-size: 20px;   
-    }
+        }
 
-    .pic{
-        width: 700px;
-        height: 425px;
-        
-        position: relative;
-        left: -340px;
-        top: 93px;
+        .box {
+            width: 440px;
+            height: 280px;
+            background-color: #f5f5f5;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            /* margin-top: 36px;   */
+        }
 
-    }
+        .card {
+            width: 350px;
+            height: 380px;
+            background-color: #000;
+            position: relative;
+            top: -36px;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+        }
 
-    .logo{
-        background-color: red;
-        position: relative;
-        top:-240px;
-        left: 650px;
-        width: 60px;
-        height: 35px;
+        .card .title p {
+            writing-mode: vertical-lr;
+            text-align: left;
+            font-size: 110px;
+            letter-spacing: 10px;
 
-    }
-    .arrow{
-        width: 0;
-        height: 0;
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        /* border-right: 20px solid #fff; */
-        border-left: 20px solid #fff;
-        position: relative;
-        top: 7px;
-        right: -20px;
-    }
+        }
 
-    
-    .pic img{
-        width: 100%;
-        height: 100%;
-    }
-    
-    
-    .txt{
-        width: 680px;
-        height: 300px;
-        background-color: #f5f5f5;
-        position: relative;
-        left: -475px;
-        top: 65px;
-        padding: 20px;
-        box-sizing: border-box;
-    
-    }  
-    .twoLineOnly{
-        height: 200px;
-    }
-    .txt h3{
-        color: red;
-    }
-    .txt h3::after{
-        display: inline-block;
-        content: '';
-        height: 1px;
-        width: 410px;
-        background-color: red;
-        vertical-align: middle;
-        margin: 20px;
-    }
-    .txt li{
-        color: #696969;
-    }
-    .txt li:nth-child(odd), .txt-Dif li:nth-child(odd){
-        background-color: #000;
-        color: #fff;
-        width: 100px;
-        height: 25px;
-        text-align: left;
-        
-        margin-bottom: 5px;
-        margin-top: 5px;
-    }
-    .txt li:nth-child(even)::before,.txt-Dif li:nth-child(even)::before{
-        display: inline-block;
-        content: '';
-        vertical-align: middle;
-        margin: 0 4px 0 10px ;
-        height: 4px;
-        width: 4px;
-        background-color: red;
+        .title h2 {
+            padding: 15px 5px 15px 0px;
+            box-sizing: border-box;
+        }
+
+        .title {
+            background-color: red;
+            height: 130px;
+            font-size: 30px;
+            padding-top: 5px;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            display: flex;
+            /* justify-content:space-between; */
+
+        }
+
+        .context {
+            height: 250px;
+            padding: 20px;
+            box-sizing: border-box;
+            color: #fff;
+            background-color: #000;
+
+        }
+
+        .context h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .context p {
+            font-size: 20px;
+        }
+
+        .pic {
+            width: 700px;
+            height: 425px;
+
+            position: relative;
+            left: -340px;
+            top: 93px;
+
+        }
+
+        .logo {
+            background-color: red;
+            position: relative;
+            top: -240px;
+            left: 650px;
+            width: 60px;
+            height: 35px;
+
+        }
+
+        .arrow {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            /* border-right: 20px solid #fff; */
+            border-left: 20px solid #fff;
+            position: relative;
+            top: 7px;
+            right: -20px;
+        }
 
 
-    }
+        .pic img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .txt {
+            width: 680px;
+            height: 300px;
+            background-color: #f5f5f5;
+            position: relative;
+            left: -475px;
+            top: 65px;
+            padding: 20px;
+            box-sizing: border-box;
+
+        }
+
+        .twoLineOnly {
+            height: 200px;
+        }
+
+        .txt h3 {
+            color: red;
+        }
+
+        .txt h3::after {
+            display: inline-block;
+            content: '';
+            height: 1px;
+            width: 410px;
+            background-color: red;
+            vertical-align: middle;
+            margin: 20px;
+        }
+
+        .txt p {
+            color: #696969;
+            padding-left: 10px;
+            position: relative;
+
+        }
+
+        .txt h4 {
+            background-color: #000;
+            color: #fff;
+            width: 100px;
+            height: 25px;
+            text-align: left;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .txt p::before {
+            display: inline-block;
+            content: '';
+            vertical-align: middle;
+            /* margin: 20px 10px 10px; */
+            height: 4px;
+            width: 4px;
+            background-color: red;
+            margin-right: 10px;
+            position: absolute;
+            top: 12px;
+            left: -5px;
+
+        }
 
 
 
-    /* 二 */
-    .section-Dif{
-        width: 960px;
-        height: 695px;
-        /* background-color: yellow; */
-        margin: auto ;
-        position: relative;
-        
-    }
+        /* 二 */
+        .section-Dif {
+            width: 960px;
+            height: 695px;
+            /* background-color: yellow; */
+            margin: auto;
+            position: relative;
 
-    .box-Dif{
-        width: 515px;
-        height: 400px;
-        background-color: #f5f5f5;
-        position: absolute;
-        right: 160px;
-        top:0px;
-        
-    }
-    .card-Dif{
-        width: 355px;
-        height: 355px;
-        background-color: #000;
-        position: relative;
-        left: 605px;
-        top: -37px;
-        display: flex;
-        flex-direction: column;
-        z-index: 1;
-    }
+        }
 
-        
-    .card-Dif .title-Dif  p{
-        writing-mode: vertical-lr;
-        font-size: 110px;
-        letter-spacing: 10px;
-        
-    }
-    .title-Dif h2{
-        padding: 15px 5px 15px 40px;
-        box-sizing: border-box;
-    }
-    .title-Dif{
-        background-color: red;
-        height: 130px;
-        font-size: 22px;
-        padding: 5px;
-        box-sizing: border-box;
-        text-align: center;
-        line-height: 100px;
-        color: #fff;
-        display: flex;
-        
-        
-    }
-    .context-Dif{
-        height: 250px;
-        padding: 20px;
-        box-sizing: border-box;
-        color: #fff;
-        background-color: #000;
+        .box-Dif {
+            width: 515px;
+            height: 400px;
+            background-color: #f5f5f5;
+            position: absolute;
+            right: 160px;
+            top: 0px;
 
-    }
-    .context-Dif h3{
-        font-size: 25px;   
-        margin-bottom: 10px;
-    }
-    .context-Dif p{
-        font-size: 20px;   
-    }
+        }
 
-    .pic-Dif{
-        width: 700px;
-        height: 425px;
-        
-        position: relative;
-        left: -280px;
-        top: 93px;
+        .card-Dif {
+            width: 355px;
+            height: 355px;
+            background-color: #000;
+            position: relative;
+            left: 605px;
+            top: -37px;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+        }
 
-    }
-    .logo-Dif{
-        background-color: red;
-        position: relative;
-        top:-225px;
-        left: -5px;
-        width: 60px;
-        height: 35px;
 
-    }
-    .arrow-Dif{
-        width: 0;
-        height: 0;
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        /* border-right: 20px solid #fff; */
-        border-left: 20px solid #fff;
-        position: relative;
-        top: 7px;
-        right: -20px;
-    }
+        .card-Dif .title-Dif p {
+            writing-mode: vertical-lr;
+            font-size: 110px;
+            letter-spacing: 10px;
 
-    
-    .pic-Dif img{
-        width: 100%;
-        height: 100%;
-    }
-    
-    .txt-Dif{
-        width: 680px;
-        height: 230px;
-        background-color: #f5f5f5;
-        position: relative;
-        left: -5px;
-        top: 40px;
-        padding: 20px;
-        box-sizing: border-box;
-    
-    }  
-    .txt-Dif h3{
-        color: red;
-    }
-    .txt-Dif h3::after{
-        display: inline-block;
-        content: '';
-        height: 1px;
-        width: 410px;
-        background-color: red;
-        vertical-align: middle;
-        margin: 20px;
-    }
-    .txt-Dif li{
-        color: #696969;
-    }
 
+        }
+
+        .title-Dif h2 {
+            padding: 15px 0px 15px 40px;
+            box-sizing: border-box;
+        }
+
+        .title-Dif {
+            background-color: red;
+            height: 130px;
+            font-size: 30px;
+            padding: 5px;
+            box-sizing: border-box;
+            /* text-align: center; */
+            line-height: 100px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        .context-Dif {
+            height: 250px;
+            padding: 20px;
+            box-sizing: border-box;
+            color: #fff;
+            background-color: #000;
+
+        }
+
+        .context-Dif h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .context-Dif p {
+            font-size: 20px;
+        }
+
+        .pic-Dif {
+            width: 700px;
+            height: 425px;
+
+            position: relative;
+            left: -280px;
+            top: 93px;
+
+        }
+
+        .logo-Dif {
+            background-color: red;
+            position: relative;
+            top: -225px;
+            left: -5px;
+            width: 60px;
+            height: 35px;
+
+        }
+
+        .arrow-Dif {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            /* border-right: 20px solid #fff; */
+            border-left: 20px solid #fff;
+            position: relative;
+            top: 7px;
+            right: -20px;
+        }
+
+
+        .pic-Dif img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .txt-Dif {
+            width: 680px;
+            height: 230px;
+            background-color: #f5f5f5;
+            position: relative;
+            left: -5px;
+            top: 40px;
+            padding: 20px;
+            box-sizing: border-box;
+
+        }
+
+        .txt-Dif h3 {
+            color: red;
+        }
+
+        .txt-Dif h3::after {
+            display: inline-block;
+            content: '';
+            height: 1px;
+            width: 410px;
+            background-color: red;
+            vertical-align: middle;
+            margin: 20px;
+        }
+
+        .txt-Dif p {
+            color: #696969;
+            padding-left: 10px;
+            position: relative;
+
+        }
+
+        .txt-Dif h4 {
+            background-color: #000;
+            color: #fff;
+            width: 100px;
+            height: 25px;
+            text-align: left;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .txt-Dif p::before {
+            display: inline-block;
+            content: '';
+            vertical-align: middle;
+            /* margin: 20px 10px 10px; */
+            height: 4px;
+            width: 4px;
+            background-color: red;
+            margin-right: 10px;
+            position: absolute;
+            top: 12px;
+            left: -5px;
+
+        }
     </style>
 
 </head>
+
 <body>
     <div class="wrap">
 
         <!-- 一 -->
         <div class="section">
             <div class="card">
-                <div class="title"><p>01</p><h2>操控的樂趣</h2>
+                <div class="title">
+                    <p>01</p>
+                    <h2>操控的樂趣</h2>
                 </div>
                 <div class="context">
                     <h3>人人滿意的駕駛體驗</h3>
                     <p>透過最佳重量分配，實現平順起步、直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的道路反饋，享受隨心馳騁的行駛快感。</p>
                 </div>
-            </div>     
+            </div>
             <div class="box">
                 <div class="pic">
                     <img src="./pic/GTR.jpg">
-                    <div class="logo"><div class="arrow"></div>
-                </div>
+                    <div class="logo">
+                        <div class="arrow"></div>
+                    </div>
                 </div>
                 <div class="txt">
                     <h3>因為我們做了這些革新</h3>
-                    <ul>
-                        <li>低重心設計</li>
-                        <li>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</li>
-                        <li>車體剛性強化</li>
-                        <li>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕駛穩定性及安全性。</li>
-                        <li>四輪獨立懸吊</li>
-                        <li>搭仔全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，靈敏度與清晰路感回饋，提升駕馭樂趣。</li>
-                    </ul>
-                </div>         
-            </div>    
+                    <h4>低重心設計</h4>
+                    <p>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</p>
+                    <h4>車體剛性強化</h4>
+                    <p>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕駛穩定性及安全性。</p>
+                    <h4>四輪獨立懸吊</h4>
+                    <p>搭仔全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，靈敏度與清晰路感回饋，提升駕馭樂趣。</p>
+                </div>
+            </div>
         </div>
 
         <!-- 二 -->
         <div class="section-Dif">
             <div class="card-Dif">
-                <div class="title-Dif"><h2>安全守護</h2><p>02</p></div>
+                <div class="title-Dif">
+                    <h2>安全守護</h2>
+                    <p>02</p>
+                </div>
                 <div class="context-Dif">
                     <h3>行車更安心的高剛性車體</h3>
                     <p>您的愛車會妥善保護您，強悍穩固的車身可使您安全無虞。世界級的安全功能讓您輕鬆自如享受旅程、豪無後顧之憂。</p>
                 </div>
-            </div>     
+            </div>
             <div class="box-Dif">
                 <div class="pic-Dif">
                     <img src="./pic/JEEP.jpg">
-                    <div class="logo-Dif"><div class="arrow-Dif"></div></div>
+                    <div class="logo-Dif">
+                        <div class="arrow-Dif"></div>
+                    </div>
                 </div>
                 <div class="txt-Dif">
                     <h3>因為我們做了這些革新</h3>
-                    <ul>
-                        <li>主動安全</li>
-                        <li>以先進的TSS系統，主動偵測路況，輔助駕駛判斷路況並維持行車安全。</li>
-                        <li>被動安全</li>
-                        <li>….的高剛性車體，使用熱沖壓材料的高強度抗扭鋼板，強化座艙對意外事故的保護力。</li>
-                        
-                    </ul>
-                </div>         
-            </div>    
+                    <h4>主動安全</h4>
+                    <p>以先進的TSS系統，主動偵測路況，輔助駕駛判斷路況並維持行車安全。</p>
+                    <h4>被動安全</h4>
+                    <p>….的高剛性車體，使用熱沖壓材料的高強度抗扭鋼板，強化座艙對意外事故的保護力。</p>
+                </div>
+            </div>
         </div>
 
 
         <!-- 三 -->
         <div class="section">
             <div class="card">
-                <div class="title"><p>03</p><h2> 乘坐舒適</h2>
+                <div class="title">
+                    <p>03</p>
+                    <h2> 乘坐舒適</h2>
                 </div>
                 <div class="context">
                     <h3>令人放鬆舒適的車室空間</h3>
                     <p>車室空間設計著重人體工學，透過方向盤、腳踏等位置優化，追求更舒適的駕駛位置，並以新型座椅設計，提高座椅包覆性，致力實現長途駕駛不疲勞的舒適駕馭樂趣。</p>
                 </div>
-            </div>     
+            </div>
             <div class="box">
                 <div class="pic">
                     <img src="./pic/F.jpg">
-                    <div class="logo"><div class="arrow"></div></div>
+                    <div class="logo">
+                        <div class="arrow"></div>
+                    </div>
                 </div>
                 <div class="txt">
                     <h3>因為我們做了這些革新</h3>
-                    <ul>
-                        <li>駕駛位置最佳化</li>
-                        <li>針對駕駛位置進行徹底的修改，讓駕馭者可如同握手般自然且舒適地操控方向盤。</li>
-                        <li>駕駛視野佳</li>
-                        <li>考量駕駛坐進車內的高度，透過前擋風玻璃位置的調整，達到盲區極小化，使駕駛視野更開闊，同步提升駕馭安全。</li>
-                        <li>更寧靜的車室</li>
-                        <li>採用最新三層結構的隔音材料，與引擎、變速箱的零件改革，將座艙的震動抑制在最小限度，提供乘客舒適安靜的感受。</li>
-                    </ul>
-                </div>         
-            </div>    
+                    <h4>駕駛位置最佳化</h4>
+                    <p>針對駕駛位置進行徹底的修改，讓駕馭者可如同握手般自然且舒適地操控方向盤。</p>
+                    <h4>駕駛視野佳</h4>
+                    <p>考量駕駛坐進車內的高度，透過前擋風玻璃位置的調整，達到盲區極小化，使駕駛視野更開闊，同步提升駕馭安全。</p>
+                    <h4>更寧靜的車室</h4>
+                    <p>採用最新三層結構的隔音材料，與引擎、變速箱的零件改革，將座艙的震動抑制在最小限度，提供乘客舒適安靜的感受。</p>
+                </div>
+            </div>
         </div>
 
 
@@ -407,29 +480,30 @@
         <!-- 四 -->
         <div class="section-Dif">
             <div class="card-Dif">
-                <div class="title-Dif"><h2>以人為本</h2><p>04</p>
+                <div class="title-Dif">
+                    <h2>以人為本</h2>
+                    <p>04</p>
                 </div>
                 <div class="context-Dif">
                     <h3>使用者導向的貼心設計</h3>
                     <p>藉由高度人性化的介面整合、傳遞車輛資訊，豐富日常駕駛體驗。從提升油耗表現到行李廂空間最適化，均細心考量，更加貼近使用者真正所需與習慣，並給予及時回應。</p>
                 </div>
-            </div>     
+            </div>
             <div class="box-Dif">
                 <div class="pic-Dif">
                     <img src="./pic/BLUE.jpg">
-                    <div class="logo-Dif"><div class="arrow-Dif"></div></div>
+                    <div class="logo-Dif">
+                        <div class="arrow-Dif"></div>
+                    </div>
                 </div>
                 <div class="txt-Dif">
                     <h3>因為我們做了這些革新</h3>
-                    <ul>
-                        <li>優異油耗表現</li>
-                        <li>以AURIS為例，更強勁的高效引擎將熱效率提升至40%，達到世界級水準，屢屢突破燃油效率新境界。</li>
-                        <li>行李廂空間最適化</li>
-                        <li>以AURIS為例，透過將電池位置移到後座下方，讓行李廂擁有更大的空間。</li>
-                        
-                    </ul>
-                </div>         
-            </div>    
+                    <h4>優異油耗表現</h4>
+                    <p>以AURIS為例，更強勁的高效引擎將熱效率提升至40%，達到世界級水準，屢屢突破燃油效率新境界。</p>
+                    <h4>行李廂空間最適化</h4>
+                    <p>以AURIS為例，透過將電池位置移到後座下方，讓行李廂擁有更大的空間。</p>
+                </div>
+            </div>
         </div>
 
 
@@ -437,34 +511,36 @@
         <!-- 五 -->
         <div class="section">
             <div class="card">
-                <div class="title"><p>05</p><h2>引以為傲</h2>
+                <div class="title">
+                    <p>05</p>
+                    <h2>引以為傲</h2>
                 </div>
                 <div class="context">
                     <h3>極具吸引力的精心設計</h3>
                     <p>TNGA車款擁有讓人忍不住回頭的新潮外觀、讓駕駛充滿自信的駕馭快感！不僅讓車主能展現個人風格，也能讓擁有者都能引以為傲。</p>
                 </div>
-            </div>     
+            </div>
             <div class="box">
                 <div class="pic">
                     <img src="./pic/R8.jpg">
-                    <div class="logo"><div class="arrow"></div></div>
+                    <div class="logo">
+                        <div class="arrow"></div>
+                    </div>
                 </div>
                 <div class="txt twoLineOnly">
                     <h3>因為我們做了這些革新</h3>
-                    <ul>
-                        <li>設計概念</li>
-                        <li>TNGA低重心設計，不僅呈現更低伏的運動化外觀，更講究高品質內裝的一致性。</li>
-                        <li>環保概念</li>
-                        <li>為了對環境保護盡一份心力，我們全面提升傳統引擎、變速箱與油電複合動力的動力效能。</li>
-                        
-                    </ul>
-                </div>         
-            </div>    
+                    <h4>設計概念</h4>
+                    <p>TNGA低重心設計，不僅呈現更低伏的運動化外觀，更講究高品質內裝的一致性。</p>
+                    <h4>環保概念</h4>
+                    <p>為了對環境保護盡一份心力，我們全面提升傳統引擎、變速箱與油電複合動力的動力效能。</p>
+                </div>
+            </div>
         </div>
 
 
     </div>
-    
-    
+
+
 </body>
+
 </html>
