@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overFlowdeGuapaCo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            width: 100%;    
+        }
+        .wrap{
+            width: 960px;
+
+            display: flex;
+            flex-wrap: wrap;
+            /* margin: 10px; */
+            margin: auto; 
+        }
+        .logo{
+            width: 100px;
+            margin: auto;
+            padding-right:350px ;
+            padding-top: 200px;
+            
+        }
+        .logo img{
+            width: 500px;
+        }
+        .item{
+            background-color: pink;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            border-radius:50px ;
+            border: 3px solid #000;
+            overflow: hidden;
+            margin: 5px;
+        }
+        .pic{
+            width: 300px;
+            height: 300px; 
+        }
+        .pic img{
+            width: 100%;
+            height: 100%;
+        }
+        .item:hover .info{
+            transition: 2s;
+            transform: translate(0,-180px);
+        }
+        .info{
+            text-align: center;
+            position: relative;
+            top: -60px;
+            background-color: aliceblue;
+            height: 300px;
+        }
+        .info h2{
+            font-size: 20px;
+            padding: 5px;
+            margin-bottom: 50px;
+            background-color: pink;
+        }
+        .info p{
+            text-align: center;
+            font-size: 20px;
+            margin: 10px;
+        }
+        
+    
+
+    </style>
+</head>
+
+<body>
+    <div class="logo"><img src="disney.png" alt="Disney"></div>
+    <div class="wrap">
+        
+        <div class="item">
+            <div class="pic">
+                <img src="./snowWhite.jpg">
+                <div class="info">
+                    <h2>《白雪公主 -- SNOW WHITE》</h2>
+                    <p>即使白雪公主是最早出現的一位迪士尼公主，但在官方設定里，她是最小的一位公主，年僅14歲。</p>   
+                </div>
+            </div>
+        </div>    
+        <div class="item">
+            <div class="pic">
+                <img src="./MULAN.jpg">
+                <div class="info">
+                    <h2>《花木蘭 -- MULUN》</h2>
+                    <p>眾多「迪士尼公主」中唯一一個沒有王室血統或者身份的公主（嫁入皇室）。
+                    不再需要依附「王子」，而是上陣殺敵保家衛國。
+                    </p>   
+                </div>
+            </div>
+        </div> 
+        <div class="item">
+            <div class="pic">
+                <img src="./Sandurara.jpg">
+                <div class="info">
+                    <h2>《仙杜瑞拉 -- CINDERELLA》</h2>
+                    <p>這個角色則是與一生為家中事務操勞、掛心的太陰，有著不謀而合的相似特質。
+                    「灰姑娘」是迪士尼創辦者之一華特·迪士尼最愛的一位公主
+                    </p>   
+                </div>
+            </div>            
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./Motoaka.jpg">
+                <div class="info">
+                    <h2>《寶嘉康蒂 -- MATOAKA》</h2>
+                    <p>唯一一個基於歷史存在的迪士尼公主。她基於北美本土真實歷史人物改編，波卡·洪塔斯是她的綽號，唯一一個有紋身的公主。。
+                    </p>   
+                </div>
+            </div>            
+        </div>
+        
+        <div class="item">
+            <div class="pic">
+                <img src="./fISH.jpg">
+                <div class="info">
+                    <h2>《小美人魚 -- MERMAID》</h2>
+                    <p>「愛麗兒」是第一位非人類的迪士尼公主
+                    </p>   
+                </div>
+            </div>            
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./Merida.jpg">
+                <div class="info">
+                    <h2>《梅莉達 -- MERIDA》</h2>
+                    <p>據說她有1500多根單獨雕刻的紅色頭髮，一共有111700根。如果將梅莉達的頭髮拉直，將有4英尺長，一直到小腿中間的部位。
+                    </p>   
+                </div>
+            </div>            
+        </div>
+        
+        
+        <div class="item">
+            <div class="pic">
+                <img src="./sleeping.png">
+                <div class="info">
+                    <h2>《睡美人 -- AURORA》</h2>
+                    <p>愛洛公主在《睡美人》中一共只有18分鐘的熒幕時間和18行字的台詞。這使她成為了最安靜的迪士尼公主。
+                    </p>   
+                </div>
+            </div>            
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./elsa.jpg">
+                <div class="info">
+                    <h2>《艾莎 -- Elsa》</h2>
+                    <p>Elsa的冰雪城堡會隨著她的心情變換顏色，藍色代表開心，紅色則是害怕，而黃色是憤怒、紫色是傷心
+                    </p>   
+                </div>
+            </div>            
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./b.jpg">
+                <div class="info">
+                    <h2>《貝兒 -- BELLA》</h2>
+                    <p>野獸是由七種動物組成，「獅子鬃毛」、「大猩猩眉毛」、「人類眼睛」、「水牛頭型和鬍子」、「公豬獠牙」、「熊身體」、「狼腿和尾巴」
+                    </p>   
+                </div>
+            </div>            
+        </div>
+    </div>
+</body>
+
+</html>
