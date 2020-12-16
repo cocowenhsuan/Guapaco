@@ -431,9 +431,9 @@ hr{
     .header i{
         display: none;
     }
-    .header{
+    /* .header{
         position: relative;
-    }
+    } */
     .header .number a{
         color: #fff;
         text-decoration: none;
@@ -528,7 +528,7 @@ hr{
 }
 .footer .contact li{
     display: inline;
-    margin: 5px;
+    margin: 3px;
 }
 .footer .contact {
     padding-top: 15px;
