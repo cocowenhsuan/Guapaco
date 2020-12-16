@@ -452,11 +452,13 @@ hr{
         font-size: 30px;
         /* top:40px;
         right: 10%; */
+        position: relative;
+        z-index: 20;
     }
     
     .header .number a:hover{
         color: rgb(238, 112, 10);
-        text-decoration: none; 
+        
     }
     .header nav{
         /* position: relative; */
