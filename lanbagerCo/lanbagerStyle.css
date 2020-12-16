@@ -243,6 +243,9 @@ input{
     height: 30px;
     width: 30px;
 }
+.student .txt{
+    color: #fff;
+}
 .studying h2{
     font-size: 36px;
 }
@@ -290,7 +293,7 @@ input{
     object-fit:contain;
 }
 .email-txt{
-    
+        
         display: flex;
         flex-direction: column;
         align-items: center;
