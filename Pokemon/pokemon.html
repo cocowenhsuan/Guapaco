@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 100%;
+            margin: auto;
+        }
+        .center{
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .center h1{
+            outline: 1px solid black;
+        }
+        
+        .row{
+            display:flex ;
+            flex-direction: row;
+        }
+        button+button{
+            margin-left: 3px;
+            
+        }
+        button{
+            transform: translateY(0px);
+            transition: all.5s;
+            background-color:rgb(233, 103, 103);
+            color: blanchedalmond;
+            border: blanchedalmond;
+            font-size: 20px;
+            outline: 0;
+            
+        }
+        button:hover{
+            background-color:rgb(22, 22, 22);
+            
+            transform: translateY(-3px);
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 10px 10px rgb(245, 221, 10) ;
+
+        }
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="center">
+            <h1>寶可夢圖鑑列表</h1>
+            <div class="row">
+                <button onclick="fetchPokemon()">載入寶可夢圖鑑列表</button>
+            <button onclick="appendCChild()">載入寶可夢圖鑑列表appendChild()</button>
+            <button onclick="reset()">Reset</button>
+            </div>
+            <div id="container"></div>
+        </div>
+
+    </div>
+
+
+    <script>
+        //container=文件中id 叫container的
+        var container = document.getElementById("container");
+
+        window.onload = appendPokemon();
+
+        function appendPokemon() {
+            let img = document.createElement("img");
+            img.setAttribute("src", "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png")
+            container.appendChild(img);
+        }
+
+        //button事件
+        function fetchPokemon() {
+            let fileName = "001";
+            let pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png`;
+            let pokemonImg = `<img src ='${pathFile}' />`;
+
+            let pokemons = '';
+            for (let i = 1; i < 890; i++) {
+                fileName = i.toString().padStart(3, '0');
+                pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
+                pokemonImg = `<img src ='${pathFile}' />`;
+                pokemons += pokemonImg;
+            }
+            container.innerHTML = pokemons;
+        }
+
+
+        function appendCChild() {
+
+            for (let i = 2; i < 890; i++) {
+                let img = document.createElement("img");
+                fileName = i.toString().padStart(3, '0');
+                pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
+                img.src = pathFile;
+                container.appendChild(img);
+            }
+
+        }
+
+        function reset() {
+            container.innerHTML = null;
+            appendPokemon();
+        }
+    </script>
+</body>
+
+</html>
