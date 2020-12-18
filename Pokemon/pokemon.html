@@ -7,7 +7,8 @@
     <title>Pokemon de Juana</title>
     <style>
         body{
-            background-image:linear-gradient(50deg, #0A1624,#6e9dd3)  ;
+            background: radial-gradient(circle at 20% 80%, rgb(151, 185, 229),rgb(183, 225, 236), rgb(201, 206, 252))
+            ;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -20,8 +21,10 @@
             align-items: center;
         }
         .center h1{
-            color: rgb(101,186,226);
-            outline: 1px solid #72C3EA;
+            color: rgb(85, 111, 122);
+            
+            font-size: 70p;
+            padding: 20px;
         }
         
         .row{
@@ -33,20 +36,22 @@
             
         }
         button{
-            color: rgb(101,186,226);
-            outline: 1px solid #72C3EA;
+            color: rgb(255, 255, 255);
+            /* outline: 1px solid #72C3EA; */
+            border: none;
+            padding: 10px;
             transform: translateY(0px);
             transition: all.5s;
-            background-color:#0A1624;
+            background-color:#92b7e2;
             font-size: 20px; 
         }
         button:hover{
-            background-color:rgb(22, 22, 22);
+            /* background-color:rgb(22, 22, 22); */
             
             transform: translateY(-3px);
             position: relative;
             z-index: 2;
-            box-shadow: 0 10px 10px rgb(245, 221, 10) ;
+            /* box-shadow: 0 10px 10px rgb(245, 221, 10) ; */
 
         }
         #container{
@@ -57,11 +62,14 @@
             
         }
         img{
-            border: 3px solid rgb(218, 213, 213);
+            /* border: 3px solid rgb(218, 213, 213); */
             border-radius: 50%;
             margin: 10px;
-            box-shadow: 2px 2px 10px whitesmoke;
+            /* box-shadow: 2px 2px 2px whitesmoke; */
+            background-image:linear-gradient(180deg,rgb(243, 119, 119),rgb(243, 174, 189),rgb(177, 158, 207));
+            filter:opacity(80%);
         }
+       
 
     </style>
 </head>
