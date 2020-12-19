@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            padding: 50px;
+        }
+        .container {
+            position: relative;
+            border-radius: 20px;
+            width: 500px;
+            margin: auto;
+            background: radial-gradient(circle at 50% 2%,
+                    rgb(6, 12, 59),
+                    rgb(71, 54, 78),
+                    rgb(254, 253, 255),
+                    rgb(134, 188, 219),
+                    rgb(78, 104, 192),
+
+                    rgb(232, 232, 250));
+        }
+        .santa{
+            position: absolute;
+            top: 0;
+            right: -100px;
+            animation: santapic 3.5s infinite;
+            z-index: 10;
+        }
+        .santa img{
+            width: 200px;
+            height: 200px;
+            
+        }
+        @keyframes santapic{
+            0%{
+                top: 0;
+                right: -100px;
+            }
+            20%{
+                top: 80px;
+                right: 0px;
+            }
+            50%{
+                top: 50;
+                right: 100px;
+            }
+            80%{
+                top: 50;
+                right: 500px;
+            }
+            100%{
+                top: 50;
+                right: 500px;
+            }
+        }
+
+        h1 {
+            color: whitesmoke;
+            text-shadow: 5px 5px 5px rgb(199, 231, 83);
+            text-align: center;
+            padding: 40px 0px 25px;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 40px;
+
+
+        }
+
+        .star {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            animation: star-shine 3s infinite;
+        }
+        
+
+        .star1 {
+            border-right: 20px solid transparent;
+            border-bottom: 15px solid  rgb(238, 233, 174);
+            border-left: 20px solid transparent;
+            transform: rotate(35deg);
+            position: absolute;
+            left: -5px;
+            top: 13px;
+        }
+        .ball{
+            animation: shine .8s  infinite;
+        }
+        @keyframes shine{
+            from{opacity: 0;}
+            to{opacity: 1;}
+            }
+        @keyframes star-shine {
+            from{
+                opacity: 0;
+                transform: rotate(0);
+               ;
+            }
+            to{opacity: 1;
+                transform: rotate(360deg);
+                box-shadow:10px ;}
+        }
+        .star2 {
+            border-right: 20px solid transparent;
+            border-bottom: 15px solid   rgb(238, 233, 174);
+            border-left: 20px solid transparent;
+            transform: rotate(-35deg);
+            position: absolute;
+            left: -5px;
+            top: 13px;
+        }
+
+        .star3 {
+            border-right: 5px solid transparent;
+            border-bottom: 13px solid  rgb(238, 233, 174);
+            border-left: 5px solid transparent;
+
+            position: absolute;
+            top: 3px;
+            left: 10px;
+        }
+
+        .top {
+            height: 0px;
+            width: 0px;
+            border-bottom: 50px solid rgb(25, 75, 56);
+            /* border-top: 40px solid red; */
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-radius: 50px;
+            position: relative;
+
+        }
+
+        .top-deco {
+            height: 5px;
+            width: 78px;
+            border-top: 50px solid transparent;
+            border-bottom: 3px solid rgb(238, 201, 186);
+            /* border-top: 40px solid red; */
+            border-left: 0px solid transparent;
+            border-right: 1px solid transparent;
+            border-radius: 80px;
+            position: absolute;
+            top: -12px;
+            left: -17px;
+            transform: rotate(40deg);
+        }
+
+        .top-ball {
+            width: 15px;
+            height: 15px;
+            border-radius: 50px;
+            background-color: rgb(114, 186, 253);
+            position: absolute;
+            top: 15px;
+            left: 0px;
+
+        }
+
+        .middle {
+            height: 0px;
+            width: 60px;
+            border-bottom: 100px solid rgb(28, 83, 42);
+            /* border-top: 40px solid red; */
+            border-left: 80px solid transparent;
+            border-right: 80px solid transparent;
+            border-radius: 50px;
+            position: relative;
+        }
+
+        .middle-deco {
+            height: 5px;
+            width: 165px;
+            border-top: 50px solid transparent;
+            border-bottom: 3px solid rgb(238, 201, 186);
+            /* border-top: 40px solid red; */
+            border-left: 0px solid transparent;
+            border-right: 1px solid transparent;
+            border-radius: 80px;
+            position: absolute;
+            top: 4px;
+            left: -15px;
+            transform: rotate(40deg);
+
+        }
+
+        .middle-ball {
+            width: 15px;
+            height: 15px;
+            border-radius: 50px;
+            background-color: rgb(146, 69, 69);
+            position: absolute;
+            top: 30px;
+            left: -10px;
+        }
+
+        .middle-ball2 {
+            width: 15px;
+            height: 15px;
+            border-radius: 50px;
+            background-color: rgb(111, 103, 223);
+            position: absolute;
+            top: 40px;
+            left: 70px;
+        }
+
+        .middle-ball3 {
+            width: 15px;
+            height: 15px;
+            border-radius: 50px;
+            background-color: rgb(238, 240, 128);
+            position: absolute;
+            top: 70px;
+            left: 10px;
+        }
+
+        .bottom {
+            height: 0px;
+            width: 130px;
+            border-bottom: 100px solid rgb(13, 51, 26);
+            /* border-top: 40px solid red; */
+            border-left: 80px solid transparent;
+            border-right: 80px solid transparent;
+            border-radius: 50px;
+            position: relative;
+        }
+
+        .bottom-deco {
+            height: 5px;
+            width: 175px;
+            border-top: 50px solid transparent;
+            border-bottom: 3px solid rgb(238, 201, 186);
+            /* border-top: 40px solid red; */
+            border-left: 0px solid transparent;
+            border-right: 1px solid transparent;
+            border-radius: 80px;
+            position: absolute;
+            top: 4px;
+            left: -15px;
+            transform: rotate(40deg);
+        }
+
+        .bottom-ball {
+            width: 15px;
+            height: 15px;
+            border-radius: 50px;
+            background-color: rgb(240, 204, 128);
+            position: absolute;
+            top: 30px;
+            left: 130px;
+        }
+
+        .bottom-ball2 {
+            width: 15px;
+            height: 15px;
+            border-radius: 50px;
+            background-color: rgb(204, 119, 178);
+            position: absolute;
+            top: 70px;
+            left: 100px;
+        }
+
+        .bottom-ball3 {
+            width: 15px;
+            height: 15px;
+            border-radius: 50px;
+            background-color: rgb(140, 197, 133);
+            position: absolute;
+            top: 10px;
+            left: 80px;
+        }
+
+        .bottom-ball4 {
+            width: 15px;
+            height: 15px;
+            border-radius: 50px;
+            background-color: rgb(195, 196, 143);
+            position: absolute;
+            top: 30px;
+            left: 0px;
+        }
+
+        .bottom-ball5 {
+            width: 15px;
+            height: 15px;
+            border-radius: 50px;
+            background-color: rgb(91, 127, 180);
+            position: absolute;
+            top: 70px;
+            left: 10px;
+        }
+
+        .root {
+            width: 30px;
+            height: 30px;
+            background-color: rgb(48, 23, 23);
+            border-radius: 0 0 20% 20%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="santa">
+            <img src="./santa.png" alt="santa">
+        </div>
+        <h1>Merry Chrismas</h1>
+        <div class="tree">
+            <div class="star">
+                <div class="star1"></div>
+                <div class="star2">
+                </div>
+                <div class="star3"></div>
+            </div>
+
+            <div class="top">
+                <div class="top-deco"></div>
+                <div class=" top-ball ball"></div>
+            </div>
+
+
+
+            <div class="middle">
+                <div class="middle-deco"></div>
+                <div class="middle-ball ball"></div>
+                <div class="middle-ball2 ball"></div>
+                <div class="middle-ball3 ball"></div>
+            </div>
+
+
+
+
+            <div class="bottom">
+                <div class="bottom-deco"></div>
+                <div class="bottom-ball ball"></div>
+                <div class="bottom-ball2 ball"></div>
+                <div class="bottom-ball3 ball"></div>
+                <div class="bottom-ball4 ball"></div>
+                <div class="bottom-ball5 ball"></div>
+            </div>
+            <div class="root"></div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
