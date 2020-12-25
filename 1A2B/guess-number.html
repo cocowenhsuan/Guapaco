@@ -41,7 +41,7 @@
     .btn-group-justified a {
       background-color: rgb(235, 141, 141);
       height: 70px;
-      color: rgb(233, 241, 248);
+      color: aliceblue;
     }
 
     .navbar {
@@ -136,32 +136,32 @@
               
               <ul id="guessResults" class="list-group">
                 <li class="list-group-item">
-                  <span class="label label-danger">0 A 1 B</span>
+                  <span>1. </span><span class="label label-danger">0 A 1 B</span>
                   <!--<span class="badge">0A1B</span>-->
                   1234
                 </li>
                 <li class="list-group-item">
-                  <span class="label label-danger">0 A 3 B</span>
+                  <span>2. </span><span class="label label-danger">0 A 3 B</span>
                   <!--<span class="badge">0A3B</span>-->
                   3456
                 </li>
                 <li class="list-group-item">
-                  <span class="label label-danger">0 A 2 B</span>
+                  <span>3. </span><span class="label label-danger">0 A 2 B</span>
                   <!--<span class="badge">0A2B</span>-->
                   4567
                 </li>
                 <li class="list-group-item">
-                  <span class="label label-danger">2 A 0 B</span>
+                  <span>4. </span><span class="label label-danger">2 A 0 B</span>
                   <!--<span class="badge">2A0B</span>-->
                   6089
                 </li>
                 <li class="list-group-item">
-                  <span class="label label-danger">3 A 0 B</span>
+                  <span>5. </span><span class="label label-danger">3 A 0 B</span>
                   <!--<span class="badge">3A0B</span>-->
                   6345
                 </li>
                 <li class="list-group-item">
-                  <span class="label label-success">4 A 0 B</span>
+                  <span>6. </span><span class="label label-success">4 A 0 B</span>
                   <!--<span class="badge badge-success">4A0B</span>-->
                   6385
                 </li>
@@ -221,6 +221,7 @@
     let reset = function () {
       guessResults.innerHTML = "";
       userGuess.value = "";
+      order=0;
     }
 
     let distinct = function (guessNumber) {
@@ -228,6 +229,8 @@
       return numset.size;
 
     }
+
+    let order=0;
 
     let rule = function (guessNumber) {
       let changeNum = parseInt(guessNumber);
@@ -239,6 +242,10 @@
         alert(`You have to enter 4 diffrent number,sweetie.. `);
         userGuess.value = "";
         return;
+      }
+      
+      if(!guessNumNaN.includes(NaN) && guessNumber.length == 4 && distinct(guessNumber) == 4){
+        order++;
       }
 
       //判斷輸入跟答案數字位置一不一樣  
@@ -263,27 +270,35 @@
       let guessNumber = userGuess.value; // !important!important!important
       let info = rule(guessNumber);
       if (info.a == 4) {
-       
         alert(`You're a Champion! CONGRATS~~`);
         btnControl(false);
         start.removeAttribute("disabled");
+
         
       }
+
+
+
       let li = document.createElement("li");
       li.setAttribute("class", "list-group-item");
       let test = info.a == 4 ? "label-success" : "label-danger";
-      let span = `<span class="label ${test}"> ${info.a} A ${info.b} B</span> ${guessNumber}`;
+     
+
+      let span = `<span>${order}. </span><span class="label ${test}"> ${info.a} A ${info.b} B</span> ${guessNumber}`;
       li.innerHTML = span;
       guessResults.appendChild(li);
+
     }
 
     //開始
     let startGame = document.getElementById("start");
     startGame.onclick = function () {
+
       if(this.hasAttribute("disabled")){
         return
       }
       reset();
+      
       showAnswer = randomNumber();
       btnControl(true);
       start.setAttribute("disabled", true);
@@ -317,13 +332,13 @@
 
 
 
-
+   
     //猜
     let guess = document.getElementById("guess");
     guess.onclick = function () {
-      if(this.hasAttribute("disabled")){
-        return
-      }
+      
+      
+      
       add();
       userGuess.value = "";
     }
@@ -331,10 +346,8 @@
 
     //猜用enter送出
     document.getElementById("userGuess").onkeyup = function (event) {
-      if(this.hasAttribute("disabled")){
-        return
-      }
       if (event.keyCode == 13) {
+        
         add();
         userGuess.value = "";
       }
