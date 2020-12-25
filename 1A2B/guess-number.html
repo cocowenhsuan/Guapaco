@@ -39,8 +39,9 @@
       font-family: 'Langar', cursive;
     }
     .btn-group-justified a {
-      background-color: rgb(216, 166, 166);
+      background-color: rgb(235, 141, 141);
       height: 70px;
+      color: rgb(233, 241, 248);
     }
 
     .navbar {
@@ -49,7 +50,7 @@
     }
 
     .active a {
-      background-color: rgb(216, 166, 166) !important;
+      background-color: rgb(235, 141, 141) !important;
     }
     .list-group-item span{
       margin:auto 20px auto 5px;
@@ -129,6 +130,10 @@
                 <a id="cheat" type="button" class="btn btn-default">PEEKING</a>
               </div>
               <br>
+              <h3>按 "STARTING" 就可以玩囉!!</h3>
+              <p>#遊戲規則:請輸入 4 個不同數字，如果數字跟答案一樣但位置不一樣就是 B ，數字一樣位置一樣就是 A ， 4 A 就贏囉~ 請大家動動頭腦~~</p>
+              
+              
               <ul id="guessResults" class="list-group">
                 <li class="list-group-item">
                   <span class="label label-danger">0 A 1 B</span>
@@ -261,6 +266,7 @@
         alert(`You're a Champion! CONGRATS~~`);
         btnControl(false);
         start.removeAttribute("disabled");
+        
       }
       let li = document.createElement("li");
       li.setAttribute("class", "list-group-item");
@@ -273,6 +279,9 @@
     //開始
     let startGame = document.getElementById("start");
     startGame.onclick = function () {
+      if(this.hasAttribute("disabled")){
+        return
+      }
       reset();
       showAnswer = randomNumber();
       btnControl(true);
@@ -284,16 +293,23 @@
     //放棄重來
     let abortGame = document.getElementById("restart");
     abortGame.onclick = function () {
+      if(this.hasAttribute("disabled")){
+        return
+      }
       reset();
       showAnswer = "QQ START it!";
       alert("Please START it again!!")
       btnControl(false);
       start.removeAttribute("disabled");
+      
     };
 
     //看答案
     let showanswer = document.getElementById("cheat");
     showanswer.onclick = function () {
+      if(this.hasAttribute("disabled")){
+        return
+      }
       alert(`${showAnswer}`);
     }
 
