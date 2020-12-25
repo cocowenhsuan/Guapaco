@@ -263,6 +263,7 @@
       let guessNumber = userGuess.value; // !important!important!important
       let info = rule(guessNumber);
       if (info.a == 4) {
+       
         alert(`You're a Champion! CONGRATS~~`);
         btnControl(false);
         start.removeAttribute("disabled");
@@ -320,6 +321,9 @@
     //猜
     let guess = document.getElementById("guess");
     guess.onclick = function () {
+      if(this.hasAttribute("disabled")){
+        return
+      }
       add();
       userGuess.value = "";
     }
@@ -327,6 +331,9 @@
 
     //猜用enter送出
     document.getElementById("userGuess").onkeyup = function (event) {
+      if(this.hasAttribute("disabled")){
+        return
+      }
       if (event.keyCode == 13) {
         add();
         userGuess.value = "";
