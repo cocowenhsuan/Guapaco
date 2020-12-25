@@ -259,6 +259,8 @@
       let info = rule(guessNumber);
       if (info.a == 4) {
         alert(`You're a Champion! CONGRATS~~`);
+        btnControl(false);
+        start.removeAttribute("disabled");
       }
       let li = document.createElement("li");
       li.setAttribute("class", "list-group-item");
