@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>PokemonModule de Juana</title>
+    <link rel="shortcut icon" href="./Pokemonlogo.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .container-fluid {
+            text-align: center;
+            padding: 50px;
+
+        }
+        
+        .jumbotron {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+
+        .jumbotron:hover {
+            transform: rotate(10deg);
+        }
+
+        .jumbotron img {
+            width: 100%;
+
+            border-radius: 50px;
+
+        }
+
+        #showall,
+        #reset,
+        #addOne,
+        #clearOne {
+            /* border-radius: 20px; */
+            padding: 0px 20px 0px 20px;
+            position: relative;
+            background-color: rgb(117, 76, 76);
+            color: #fff;
+        }
+
+        #showall:hover .tag {
+            top: -150%;
+
+        }
+
+
+        .tag {
+            position: absolute;
+            top: -200%;
+            left: 35%;
+        }
+
+        .tag img {
+            width: 30px;
+
+        }
+
+        .btn-primary {
+
+            background-color: red;
+            border-radius: 100px;
+        }
+
+        .row {
+            margin-top: 20px;
+            justify-content: center;
+
+        }
+
+        .card {
+            background-color: rgb(126, 113, 113);
+            border: 2px solid rgb(54, 54, 47);
+            padding: 0px;
+            margin: 5px;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .typebox {
+            position: absolute;
+            background-color: rgb(216, 152, 152);
+            color: cornsilk;
+            padding: 5px 70px;
+            transform: rotate(-30deg);
+            left: -50px;
+            top: 10px;
+
+
+
+        }
+
+        .card:hover {
+            background-color: #f8bb5f;
+            transition: .5s;
+            transform: scale(1.1);
+
+            z-index: 20;
+
+        }
+
+        .card-body {
+            background-color: #f8bb5f;
+            border-top: 2px solid rgb(54, 54, 47);
+        }
+
+        .card:hover .card-body {
+            background-color: rgb(126, 113, 113);
+        }
+
+        .card-text {
+            font-size: 25px;
+            font-weight: 800;
+            color: rgb(72, 78, 78);
+        }
+
+        .card:hover .card-text {
+            color: azure;
+        }
+
+        .card:hover .card-title {
+            color: azure;
+        }
+
+        #exampleModal {
+            text-align: center;
+        }
+
+        .modal-body {
+            display: flex;
+            position: relative;
+        }
+
+        #description p {
+            text-align: left;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(35px, -50%);
+            font-size: 20px;
+            color: black;
+
+        }
+
+        .modal-header {
+            background-color: rgb(233, 113, 113);
+        }
+
+        #exampleModalLabel {
+            color: antiquewhite;
+        }
+
+        .modal-header button {
+            background-color: rgb(233, 113, 113);
+            border: none;
+            border-radius: 50%;
+        }
+
+        .modal-header button span {
+            border-radius: 50%;
+        }
+
+        .modal-header button span img {
+            border-radius: 100%;
+            width: 50px;
+            outline: none;
+        }
+
+        .card:hover .Fire {
+            text-shadow: 1px 1px 1px rgb(196, 29, 29);
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div class="container-fluid">
+        
+            <div class="jumbotron"><img src="./Pokemonlogo.png" alt="pokemonlogo"></div>
+            <button id="showall">
+                <div class="tag"><img src="./tag.png" alt=""></div> SHOW ALL
+            </button>
+            <button id="addOne">ADD ONE</button>
+            <button id="clearOne">CLEAR ONE</button>
+            <button id="reset">CLEAR ALL</button>
+        
+
+        <div class="row"></div>
+    </div>
+
+
+    <!-- Template -->
+    <template id="cardPokemon">
+
+        <div class="card" style="width: 18rem;">
+            <div class="typebox"></div>
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary">
+                    詳細內容
+                </a>
+            </div>
+        </div>
+
+    </template>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="./pokemonball.png" alt="pokemonball"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="pokemonImage">
+                    <h3 id="description" class="text-primary"></h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+
+
+    <script>
+        window.onload = function () {
+            getPokemonJSON();
+        };
+
+        let row = document.querySelector(".row");
+        let modal = document.querySelector("#exampleModal");
+        let cardPokemon = document.querySelector("#cardPokemon");
+        let pokemonArrayNew = [];
+        let card;
+        let _p = document.createElement("p");
+        let cardIndex = 0;
+
+
+
+        //載入卡片
+        document.getElementById("showall").addEventListener("click", function () {
+
+            cardIndex = pokemonArrayNew.length;
+            Reset();
+            cardcontent(cardIndex);
+        });
+
+        //清除卡片
+        document.getElementById("reset").addEventListener("click", function () {
+            Reset();
+            cardIndex = 0;
+        });
+
+        //增一張
+        document.getElementById("addOne").addEventListener("click", function () {
+
+            cardIndex++;
+            Reset();
+            cardcontent(cardIndex);
+        });
+
+        //減一張
+        document.getElementById("clearOne").addEventListener("click", function () {
+            if (cardIndex == 0) {
+                return;
+            }
+            cardIndex--;
+            Reset();
+            cardcontent(cardIndex);
+        });
+
+
+
+
+
+        //寶可夢JSON檔案
+        function getPokemonJSON() {
+
+            //非同步網路資料存取
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                pokemonArray = JSON.parse(this.responseText);
+                TransformData(pokemonArray);
+            };
+            xhr.open("GET", "https://raw.githubusercontent.com/apprunner/pokemon.json/master/pokedex.json")
+            xhr.send();
+        };
+
+        //寶可夢資料
+        function TransformData(dataArray) {
+            dataArray.forEach(x => {
+                let id = x.id.toString().padStart(3, "0");
+                let name = x.name.chinese;
+                let hp = x.base.HP;
+                let attack = x.base.Attack;
+                let defense = x.base.Defense;
+                let sp_Attack = x.base["Sp. Attack"];
+                let sp_Defense = x.base["Sp. Defense"];
+                let speed = x.base.Speed;
+                let img = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`;
+                let type = x.type;
+
+
+
+
+                let obj = {
+                    Id: id,
+                    Name: name,
+                    Hp: hp,
+                    Attack: attack,
+                    Defense: defense,
+                    Sp_Attack: sp_Attack,
+                    Sp_Defense: sp_Defense,
+                    Speed: speed,
+                    Type: type,
+                    Img: img
+
+                };
+                pokemonArrayNew.push(obj);
+            });
+        };
+
+
+
+
+        //卡片內容 (Tamplate加進row)
+        function cardcontent(item) {
+
+            if (row.innerText == "") {
+                pokemonArrayNew.forEach((x, index) => {
+                    if (item <= index) {
+                        return
+                    }
+                    card = cardPokemon.content.cloneNode(true);
+                    card.querySelector("h5").innerText = `NO. ${x.Id}`;
+                    card.querySelector("p").innerText = x.Name;
+                    card.querySelector("img").src = x.Img;
+                    // card.querySelector(".typebox").innerText = x.Type;
+                    x.Type.forEach(item => {
+                        let span = document.createElement("span")
+                        let typebox = card.querySelector(".typebox")
+                        span.innerHTML = item;
+                        span.setAttribute("class", `${item}`)
+                        typebox.appendChild(span)
+                    })
+
+
+                    card.querySelector(".btn").setAttribute("data-bs-toggle", "modal");
+                    card.querySelector(".btn").setAttribute("data-bs-target", "#exampleModal");
+                    modalcontent(card, x);
+                    row.appendChild(card);
+                });
+            };
+        };
+
+
+        //Modal
+        function modalcontent(card, x) {
+            card.querySelector(".btn").addEventListener("click", function () {
+                modal.querySelector("h5").innerText = `No. ${x.Id} --- ${x.Name}`;
+                modal.querySelector("#pokemonImage").src = x.Img;
+
+                add(x);
+            });
+        };
+
+
+        //詳細內容
+        function add(x) {
+            let keys = Object.keys(x);
+            let values = Object.values(x);
+            let empty = "";
+
+            keys.length = 8;
+            for (let i = 2; i < keys.length; i++) {
+                empty += keys[i] + ":" + values[i] + "\n";
+            }
+
+            let description = document.querySelector("#description");
+            _p.innerText = empty;
+            description.appendChild(_p);
+
+        };
+
+
+        //清除卡片
+        function Reset() {
+            row.innerText = "";
+        }
+    </script>
+
+</body>
+
+</html>
