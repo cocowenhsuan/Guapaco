@@ -24,7 +24,7 @@
             padding: 50px;
 
         }
-        
+
         .jumbotron {
             width: 50%;
             margin-left: auto;
@@ -185,6 +185,13 @@
         .card:hover .Fire {
             text-shadow: 1px 1px 1px rgb(196, 29, 29);
         }
+
+        @media screen and (max-width:768px) {
+            .col-12 {
+                display: flex;
+                justify-content: center;
+            }
+        }
     </style>
 
 </head>
@@ -194,15 +201,18 @@
 
 
     <div class="container-fluid">
-        
-            <div class="jumbotron"><img src="./Pokemonlogo.png" alt="pokemonlogo"></div>
+
+        <div class="jumbotron"><img src="./Pokemonlogo.png" alt="pokemonlogo"></div>
+        <div class="col-12">
             <button id="showall">
                 <div class="tag"><img src="./tag.png" alt=""></div> SHOW ALL
             </button>
             <button id="addOne">ADD ONE</button>
             <button id="clearOne">CLEAR ONE</button>
             <button id="reset">CLEAR ALL</button>
-        
+        </div>
+
+
 
         <div class="row"></div>
     </div>
