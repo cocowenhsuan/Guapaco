@@ -30,9 +30,11 @@
             padding-top: 50px;
             position: relative;
         }
-        .container{
+
+        .container {
             justify-content: center;
         }
+
         .input-group {
             width: 50%;
             /* margin-bottom: 50px; */
@@ -46,7 +48,7 @@
             margin-bottom: 70px;
         }
 
-        
+
 
         #birthday {
             z-index: 1000;
@@ -66,28 +68,30 @@
         }
 
         .info {
-            margin:50px auto;
+            margin: 50px auto;
             display: flex;
         }
 
         #magicNum,
         #sign {
-            
+
             padding: 30px;
             font-size: 50px;
             color: lightyellow;
         }
-        
-        h3{
+
+        h3 {
             font-size: 30px;
         }
-        #dsc{
+
+        #dsc {
             font-size: 20px;
             color: azure;
         }
-        #inputBtn{
+
+        #inputBtn {
             background-color: transparent;
-           
+
             color: #fff;
         }
 
@@ -97,69 +101,77 @@
             top: 20%;
             left: 0;
         }
-        .end{
+
+        .end {
             margin-bottom: 20px;
         }
+
         @media screen and (max-width: 500px) {
 
-            h1{
+            h1 {
                 font-size: 35px;
             }
+
             .input-group {
-            width: 80%;
-            /* margin-bottom: 50px; */
-        }
+                width: 80%;
+                /* margin-bottom: 50px; */
+            }
+
             .Span {
 
 
-font-size: 15px;
+                font-size: 15px;
 
-}
-            h3{
-            font-size: 10px;
+            }
+
+            h3 {
+                font-size: 10px;
+            }
+
+            #magicNum,
+            #sign {
+
+                padding: 0px 10px;
+                font-size: 10px;
+                color: azure;
+            }
+
+            #dsc {
+                font-size: 10px;
+
+            }
         }
-        #magicNum,
-        #sign {
-            
-            padding:0px 10px;
-            font-size: 10px;
-            color: azure;
-        }
-        #dsc{
-            font-size: 10px;
-            
-        }
-        }
-        
     </style>
 </head>
 
 <body id="particles-js">
     <h1>生命靈數大解析</h1>
 
-    
-                <div class="input-group mb-3">
-                    <input type="date" class="form-control" id="birthday" aria-label="Recipient's username"
-                        aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary" type="button" id="inputBtn">點我</button>
-                </div>
-            
-            
-                <div class="info">
-                    <h3>你的 <span class="Span">生命靈數</span> 是 : </h3>
-                    <div id="magicNum"></div>
-                    <h3>你的 <span class="Span">星座</span> 是 : </h3>
-                    <div id="sign"></div>
-                </div>
-            
-            
-            <div id="end">
-                <span class="Span"><h3>個性描述 : </h3></span>
-                <div id="dsc"></div>
-            </div>
-     
-    
-    
+
+    <div class="input-group mb-3">
+        <input type="date" class="form-control" id="birthday" aria-label="Recipient's username"
+            aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="button" id="inputBtn">點我</button>
+    </div>
+
+
+    <div class="info">
+        <h3>你的 <span class="Span">生命靈數</span> 是 : </h3>
+        <div id="magicNum"></div>
+        <h3>你的 <span class="Span">星座</span> 是 : </h3>
+        <div id="sign"></div>
+    </div>
+
+
+    <div id="end">
+        <span class="Span">
+            <h3>個性描述 : </h3>
+        </span>
+        <div id="dsc"></div>
+    </div>
+
+
+
 
 
 
