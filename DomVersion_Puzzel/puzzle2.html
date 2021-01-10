@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="puzzelstyle2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <h1><i class="fas fa-puzzle-piece"></i>  Puzzle  <i class="fas fa-puzzle-piece"></i></h1>
+
+    <div class="content">
+     
+        <div id="container"></div>
+        <div class="info">
+            <div class="container-complete"><img src="./SP.png" alt="strong"></div>
+            <h2>請選擇難度: </h2>
+            <form name="choose" id="choose" >
+                
+                <label><input type="radio" name="eachChooseBtn" value="3" > 3x3 </label><br>
+                <label><input type="radio" name="eachChooseBtn" value="4"> 4x4 </label><br>
+                <label><input type="radio" name="eachChooseBtn" value="5"> 5x5 </label><br>
+              
+            </form>
+            <button id="Startbutton">START</button>
+            <button id="moveBtn">MOVES: 0</button>
+        </div>
+        
+    </div>
+    
+
+    <!-- <div class="content-button">
+        <button>2x2</button>
+        <button>3x3</button>
+        <button>4x4</button>
+    </div> -->
+
+
+    <script src="./game2.js"></script>
+
+</body>
+
+</html>
