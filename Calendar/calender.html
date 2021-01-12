@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./calender_style.css">
+
+</head>
+
+<body>
+
+
+
+    <input type="checkbox" name="" id="menu_Btn_control">
+    <h1>CALENDAR de COCO</h1>
+    <div class="calendar">
+        <label for="menu_Btn_control" class="memoBtn" id="create" onclick="Create()"><i class="fas fa-plus"></i></label>
+        <div class="lightbox" id="dark">
+
+            <div class="memo-content">
+                <div class="warning" id="dark_warn">
+                    <button id="dark_warnBtn" onclick="WarnBtn()">x</button>
+                    <img src="./reminder.png" alt="reminder">
+                    <div class="warning-txt">親愛的 ， 請填寫好完整資料喔 ❤</div>
+                </div>
+                <div class="memo">
+                    <div class="memo-info">
+                        <div class="date">
+                            <h3># 日期: </h3>
+                            <input type="date" id="memoDate">
+                        </div>
+                        <div class="time">
+                            <h3># 時間: </h3>
+                            <input type="time" id="memoTime">
+                        </div>
+                        <div class="thing">
+                            <h3># 事項: </h3>
+                            <input type="text" id="memoThing">
+                        </div>
+                        <div class="ChooseColor">
+                            <div class="eachColor" id="d06161"></div>
+                            <div class="eachColor" id="e49a45"></div>
+                            <div class="eachColor" id="afbd73"></div>
+                            <div class="eachColor" id="a5e9f5"></div>
+                            <div class="eachColor" id="a17ab3"></div>
+                        </div>
+                        <div class="Btn">
+                            <button id="enter" onclick="SaveDate()">送出</button>
+                            <button id="cancel" onclick="Cancel()">取消</button>
+                            <button id="revise" onclick="Revise()">修改</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title">
+            <div class="title-month">
+                <a href="#" id="prev"><i class="fas fa-angle-double-left"></i></a>
+                <h2 class="txtColor" id="calendar-title">Month</h2>
+                <a href="#" id="next"><i class="fas fa-angle-double-right"></i></a>
+
+            </div>
+
+            <h2 class="txtColor small" id="calendar-year">Year</h2>
+
+        </div>
+        <hr>
+        <div class="body">
+
+            <div class="lightgrey body-list">
+                <ul>
+                    <li>MON</li>
+                    <li>TUE</li>
+                    <li>WED</li>
+                    <li>THU</li>
+                    <li>FRI</li>
+                    <li>SAT</li>
+                    <li>SUN</li>
+                </ul>
+            </div>
+
+            <div class="darkgrey body-list">
+                <ul id="days">
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="./calender_js.js"></script>
+
+</body>
+
+</html>
