@@ -168,6 +168,7 @@ h1 {
     overflow: auto;
     text-align: center;
     padding: 2px;
+    transition: .1s;
 }
 
 .body-list ul li::-webkit-scrollbar {
