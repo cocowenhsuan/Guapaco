@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO0UjQ9p2fzrDdaWtoyXVe_cWDZXV4kXE&callback=initMap&libraries=&v=weekly"
+        defer></script>
+    <style type="text/css">
+        
+        #map {
+            height: 100%;
+        }
+
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: {
+                    lat: 25.0416004,
+                    lng: 121.5341098
+
+                },
+                zoom: 20,
+            });
+        }
+
+
+        function initMap() {
+            const myLatLng = {
+                lat: 25.041651893061086,
+                lng: 121.53629958550256
+                
+            };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: myLatLng,
+            });
+            new google.maps.Marker({
+                position: myLatLng,
+                map,
+                title: "Build School",
+            });
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+    <div id="map"></div>
+</body>
+
+</html>
