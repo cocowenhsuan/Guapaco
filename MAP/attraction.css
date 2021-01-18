@@ -10,9 +10,11 @@
     height: 80%;
 
 }
-#checkBtn{
+
+#checkBtn {
     padding: 8px;
 }
+
 .item {
     text-align: center;
     display: flex;
@@ -88,6 +90,8 @@
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
 }
 
 #Add {
@@ -167,18 +171,23 @@
         transform: translateX(0px);
     }
 }
-@media screen and (max-width:400px) {
-    .row{
+
+@media screen and (max-width:768px) {
+    .row {
         display: flex;
         flex-direction: column
     }
-    .section-sideMenu{
-        height: 50vh;
-        width: 100%; 
+
+    .section-sideMenu {
+        height: 40vh;
+        width: 100%;
     }
+
     .section-map {
-        width: 100%}
-    #Loading{
+        width: 100%
+    }
+
+    #Loading {
         height: 20%;
     }
 }
