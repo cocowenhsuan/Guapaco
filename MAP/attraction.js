@@ -20,6 +20,7 @@ window.onload = function () {
     promise1
         .then(()=>{
             Loading.style.display='none';
+             Add.disabled=false;
         });
 
     checkBtn.addEventListener("click", function () {
